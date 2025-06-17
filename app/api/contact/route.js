@@ -1,7 +1,7 @@
 import { connectDB } from '@/lib/mongodb';
 import { NextResponse } from 'next/server';
 import mongoose from 'mongoose';
-import Contact from '@/models/contact'; // moved from @/app/models
+import Contact from '@/models/contact';
 
 export async function POST(req) {
   try {

@@ -8,8 +8,8 @@ import { Menu, X } from 'lucide-react';
 const navItems = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about' }, 
-  { label: 'Portfolio', href: '/' },
-  { label: 'Resume', href: '/' },
+  { label: 'Portfolio', href: '/portfolio' },
+  { label: 'Resume', href: '/resume' },
 ];
 
 export default function Header() {
@@ -99,7 +99,7 @@ export default function Header() {
           ))}
 
           <Link
-            href="/"
+            href="contact/"
             className="block mt-4 bg-[#e0c840] hover:bg-yellow-300 text-black text-center px-4 py-2 rounded text-sm font-medium"
           >
             CONTACT US

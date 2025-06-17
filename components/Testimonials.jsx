@@ -20,17 +20,31 @@ const testimonials = [
     name: 'Zechariah Lewis',
     title: 'CEO | Founder',
   },
+  {
+    content: 'Suspendisse vitae nunc ac urna gravida maximus.',
+    name: 'Zechariah Lewis',
+    title: 'CEO | Founder',
+  },
+  {
+    content: 'Suspendisse vitae nunc ac urna gravida maximus.',
+    name: 'Zechariah Lewis',
+    title: 'CEO | Founder',
+  },
+  {
+    content: 'Suspendisse vitae nunc ac urna gravida maximus.',
+    name: 'Zechariah Lewis',
+    title: 'CEO | Founder',
+  },
 ];
 
-export default function TestimonialSection() {
+export default function TestimonialS() {
   return (
     <section
       className="relative bg-cover bg-center bg-no-repeat py-16 px-4 md:px-12"
       style={{
-        backgroundImage: "url('/bg-overlay.jpg')", // 👈 Make sure this path is correct and public
+        backgroundImage: "url('/bg-overlay.jpg')",
       }}
     >
-      {/* ✅ Semi-transparent dark overlay */}
       <div className="absolute inset-0 bg-black/50 z-0 backdrop-blur-sm"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto text-center text-white">
@@ -39,10 +53,14 @@ export default function TestimonialSection() {
         <p className="max-w-2xl mx-auto mb-10 text-gray-200">
           Duis ac finibus enim, sit amet vulputate quam. Ut ac ante vel dolor pulvinar bibendum. Curabitur molestie, nisl quis porta laoreet, est ex pellentesque orci.
         </p>
-
         <Swiper
           modules={[Autoplay]}
-          autoplay={{ delay: 3000 }}
+          loop={true}
+          autoplay={{
+            delay: 1000,
+            disableOnInteraction: false,
+          }}
+          speed={4000} 
           spaceBetween={15}
           breakpoints={{
             320: { slidesPerView: 1, spaceBetween: 10 },

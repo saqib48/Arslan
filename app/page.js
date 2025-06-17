@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 import Header from '@/components/Header';
 import IntroSection from '@/components/Introsection';
 import OurServicesSection from '@/components/OurServicesSection';
-import VideenPromotionSection from '@/components/VideenPromotionSection';
+import Vide0Promotion from '@/components/VideoPromotion';
 
 export default function Home() {
   return (
@@ -17,7 +17,7 @@ export default function Home() {
         <IntroSection/>
         <Testimonials />
         <OurServicesSection/>
-        <VideenPromotionSection/>
+        <Vide0Promotion/>
         <Footer />
       </main>
     </>

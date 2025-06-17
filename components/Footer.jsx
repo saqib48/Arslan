@@ -15,24 +15,31 @@ export default function Footer() {
         </Link>
         </div>
 
-        <nav className="mb-6">
-          <ul className="flex flex-wrap justify-center gap-6 text-white font-medium">
-            {['Home', 'About', 'Services', 'Blog', 'Contact Us'].map((item, index) => (
-              <li key={index}>
-                <Link href="#" className="hover:text-[#e0c840] transition-colors">
-                  {item}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
+           <nav className="mb-6">
+      <ul className="flex flex-wrap justify-center gap-6 text-white font-medium">
+        <li>
+          <Link href="/" className="hover:text-[#e0c840] transition-colors">Home</Link>
+        </li>
+        <li>
+          <Link href="/about" className="hover:text-[#e0c840] transition-colors">About</Link>
+        </li>
+        <li>
+          <Link href="/portfolio" className="hover:text-[#e0c840] transition-colors">Portfolio</Link>
+        </li>
+        <li>
+          <Link href="/resume" className="hover:text-[#e0c840] transition-colors">Resume</Link>
+        </li>
+        <li>
+          <Link href="/contact" className="hover:text-[#e0c840] transition-colors">Contact Us</Link>
+        </li>
+      </ul>
+    </nav>
 
         <p className="text-gray-500 max-w-xl mx-auto mb-6">
           Duis ac finibus enim, sit amet vulputate quam. Ut ac ante vel dolor pulvinar bibendum.
           Curabitur molestie, nisl quis porta laoreet, est ex pellentesque orci.
         </p>
 
-        {/* Social Icons */}
         <div className="flex justify-center gap-4 mb-6">
           <Link href="#" className="text-white hover:text-blue-600 text-xl">
             <FaFacebookF />

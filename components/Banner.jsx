@@ -5,8 +5,18 @@ import Link from 'next/link';
 
 export default function Banner() {
   return (
-    <section className="relative bg-black text-white py-16 overflow-hidden">
-      <div className="absolute inset-0 bg-black opacity-70 z-0"></div>
+    <section className="relative text-white py-16 overflow-hidden bg-black">
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/images/L-4.jpg"
+          alt="Studio Art"
+          fill
+          className="object-cover w-full h-full"
+          priority
+        />
+        <div className="absolute inset-0 bg-black opacity-70" />
+      </div>
+
       <div className="relative z-10 max-w-[85%] mx-auto px-4 grid md:grid-cols-2 items-center gap-5">
         <div className="space-y-2">
           <div className="text-center md:text-left">
@@ -44,8 +54,8 @@ export default function Banner() {
         <div className="text-center md:text-left space-y-6 animate-fadeInRight">
           <h1 className="text-4xl md:text-5xl font-bold uppercase">WELCOME TO Arslan Edit's</h1>
           <h2 className="text-2xl md:text-3xl font-semibold">
-            LET&apos;S <span className="text-[#ffde21]">MAKE</span> YOUR VIDEO LOOKS MORE{' '}
-            <span className="text-[#ffde21]">COOL</span>
+            LET&apos;S <span className="text-[#e0c840]">MAKE</span> YOUR VIDEO LOOKS MORE{' '}
+            <span className="text-[#e0c840]">COOL</span>
           </h2>
           <p className="text-gray-300">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec
@@ -59,17 +69,6 @@ export default function Banner() {
             <i className="fas fa-arrow-right ml-2"></i>
           </Link>
         </div>
-      </div>
-
-      <div className="absolute right-0 bottom-0 z-0 opacity-30 md:block hidden">
-        <Image
-
-          src="/images/L-4.jpg"
-          alt="Studio Art"
-          width={2000}
-          height={1000}
-          priority
-        />
       </div>
     </section>
   );

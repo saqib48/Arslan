@@ -5,7 +5,7 @@ import React from 'react';
 import { FaArrowRight } from 'react-icons/fa';
 import Image from 'next/image'; 
 
-export default function VideenPromotionSection() {
+export default function VideoPromotion() {
   return (
     <section className="relative w-full py-20 px-6 md:px-20 overflow-hidden">
       <div className="absolute inset-0 z-0">
@@ -21,7 +21,7 @@ export default function VideenPromotionSection() {
       <div className="relative z-10 max-w-6xl mx-auto text-center text-white">
     
         <h5 className="text-sm text-[#e0c840] font-semibold mb-9 tracking-wide">
-          VIDEEN PROMOTION
+          VIDEO PROMOTION
         </h5>
 
         <h3 className="text-3xl md:text-4xl font-bold mb-6">

@@ -10,38 +10,41 @@ export default function ContactSection() {
   const [successMsg, setSuccessMsg] = useState("");
   const [success, setSuccess] = useState(false);
 
- const handlesubmit = async (e) => {
+const handlesubmit = async (e) => {
   e.preventDefault();
 
-  const res = await fetch("/api/contact", {
-    method: "POST",
-    headers: {
-      "Content-type": "application/json",
-    },
-    body: JSON.stringify({
-      fullname,
-      email,
-      message,
-    }),
-  });
+  try {
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify({ fullname, email, message }),
+    });
 
-  const { msg, success } = await res.json();
+    const { msg, success } = await res.json();
 
-  setSuccess(success);
+    setSuccess(success);
 
-  if (success) {
-    setFullname("");
-    setEmail("");
-    setMessage("");
-    setError([]);
-    setSuccessMsg(msg);
+    if (success) {
+      setFullname("");
+      setEmail("");
+      setMessage("");
+      setError([]);
+      setSuccessMsg(msg);
 
-    setTimeout(() => {
-      setSuccess(false);
+      setTimeout(() => {
+        setSuccess(false);
+        setSuccessMsg("");
+      }, 200);
+    } else {
+      setError(msg);
       setSuccessMsg("");
-    }, 1000);
-  } else {
-    setError(msg);
+    }
+  } catch (error) {
+    console.error("Client Error:", error);
+    setError(["Something went wrong. Please try again later."]);
+    setSuccess(false);
     setSuccessMsg("");
   }
 };

@@ -7,7 +7,6 @@ export async function POST(req) {
   try {
     const { fullname, email, message } = await req.json();
 
-    // Optional: Basic check to avoid empty inputs
     if (!fullname || !email || !message) {
       return NextResponse.json({
         msg: ["All fields are required."],

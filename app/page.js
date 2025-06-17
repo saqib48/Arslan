@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <Header/>
-      <main className="bg-[#0d0d0d] text-white">
+      <main className="bg-[#101010] text-white">
         <Banner />
         <Portfolio />
         <IntroSection/>

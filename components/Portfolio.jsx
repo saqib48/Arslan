@@ -48,11 +48,11 @@ export default function Portfolio() {
   const visibleProjects = showAll ? projects : projects.slice(0, 6);
 
   return (
-    <section className="bg-[#0d0d0d] px-4 py-12 md:px-10 lg:px-20">
+    <section className="bg-[#101010] px-4 py-12 md:px-10 lg:px-20">
       <div className="text-center mb-12">
         <h5 className="text-sm text-[#e0c840] tracking-widest">PORTFOLIO</h5>
         <h3 className="text-3xl font-bold text-white">MY WORK</h3>
-        <p className="text-[#b0b0b0] mt-3 max-w-xl mx-auto text-base">
+        <p className="text-[#b9b4b4] mt-3 max-w-xl mx-auto text-base">
           Duis ac finibus enim, sit amet vulputate quam. Ut ac ante vel dolor pulvinar bibendum.
         </p>
       </div>

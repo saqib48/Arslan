@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export default function Aboutskill() {
   return (
-    <section className="py-20 px-6 md:px-20 w-full bg-[#0d0d0d]">
+    <section className="py-20 px-6 md:px-20 w-full bg-[#101010]">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         <div className="w-[100%] md:w-[80%]">
           <Image
@@ -18,9 +18,9 @@ export default function Aboutskill() {
         </div>
 
         <div>
-          <h5 className="text-sm text-gray-400 font-medium">SINCE 2004</h5>
+          <h5 className="text-sm text-[#e0c840] font-medium">SINCE 2004</h5>
           <h3 className="text-3xl font-bold text-white mt-2">HELLO, I'M ARSLAN KHIZER</h3>
-          <p className="mt-4 text-gray-300">
+          <p className="mt-4 text-[#b9b4b4]">
             Duis ac finibus enim, sit amet vulputate quam. Ut ac ante vel dolor pulvinar bibendum.
             Curabitur molestie, nisl quis porta laoreet.
           </p>

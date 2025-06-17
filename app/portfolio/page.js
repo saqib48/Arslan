@@ -8,7 +8,7 @@ function portfolio() {
   return (
     <div>
         <Header/>
-        <main className='bg-[#0d0d0d] text-white'>
+        <main className='bg-[#101010] text-white'>
             <Portfoliobanner/>
             <Portfolio/>
             <Footer/>

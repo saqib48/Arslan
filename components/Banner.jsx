@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function Banner() {
   return (
-    <section className="relative text-white py-16 overflow-hidden bg-black">
+    <section className="relative text-white py-16 overflow-hidden bg-[#101010]">
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/L-4.jpg"
@@ -57,7 +57,7 @@ export default function Banner() {
             LET&apos;S <span className="text-[#e0c840]">MAKE</span> YOUR VIDEO LOOKS MORE{' '}
             <span className="text-[#e0c840]">COOL</span>
           </h2>
-          <p className="text-gray-300">
+          <p className="text-[#b9b4b4]">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec
             ullamcorper mattis, pulvinar dapibus leo.
           </p>

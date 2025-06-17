@@ -20,7 +20,7 @@ export default function VideoPromotion() {
 
       <div className="relative z-10 max-w-6xl mx-auto text-center text-white">
     
-        <h5 className="text-sm text-[#e0c840] font-semibold mb-9 tracking-wide">
+        <h5 className="text-sm text-[#e0c840] font-semibold mb-2 tracking-wide">
           VIDEO PROMOTION
         </h5>
 
@@ -28,7 +28,7 @@ export default function VideoPromotion() {
           Explore resources for creating successful video ads.
         </h3>
 
-        <div className="mb-6 md:mb-10 h-6" />
+        <div className=" h-6" />
 
         <Link
           href="#"

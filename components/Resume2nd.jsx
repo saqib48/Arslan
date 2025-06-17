@@ -7,7 +7,7 @@ export default function Resume2nd() {
     <section className="py-9 px-4 ">
       <div className="max-w-5xl mx-auto">
         <div className="text-center">
-          <i className="text-white  md:text-sm leading-relaxed mb-8">
+          <i className="text-[#b9b4b4]  md:text-sm leading-relaxed mb-8">
             “Donec et turpis vel ipsum viverra tempus et nec mauris. Mauris rhoncus condimentum enim sed consectetur. 
             Curabitur sit amet enim non tellus mattis commodo sit amet nec nunc. Nunc maximus egestas urna, ac mattis 
             mi consectetur eget. Sed vitae dignissim lectus, et rhoncus sapien. Praesent laoreet turpis nunc, et 

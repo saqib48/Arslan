@@ -35,7 +35,7 @@ export default function Footer() {
       </ul>
     </nav>
 
-        <p className="text-gray-500 max-w-xl mx-auto mb-6">
+        <p className="text-[#b9b4b4] max-w-xl mx-auto mb-6">
           Duis ac finibus enim, sit amet vulputate quam. Ut ac ante vel dolor pulvinar bibendum.
           Curabitur molestie, nisl quis porta laoreet, est ex pellentesque orci.
         </p>
@@ -57,7 +57,7 @@ export default function Footer() {
 
         <hr className="border-t border-gray-300 mb-4" />
 
-        <p className="text-sm text-gray-400">
+        <p className="text-sm text-[#b9b4b4]">
           Copyright 2022 © All Right Reserved. Design by Rometheme
         </p>
       </div>

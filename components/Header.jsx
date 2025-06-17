@@ -1,6 +1,4 @@
 "use client";
-
-import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
@@ -16,7 +14,7 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="bg-[#0d0d0d] text-white sticky top-0 z-50">
+    <header className="bg-[#101010] text-white sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
        <Link href='/'> <h1 className=' text-3xl font-bold'>
       <span className='text-[#e0c840]'>ARSLAN</span> EDIT'S
@@ -56,7 +54,7 @@ export default function Header() {
             )
           )}
           <Link
-            href="#"
+            href="/contact"
             className="ml-4 bg-[#e0c840] text-black px-4 py-2 rounded hover:bg-yellow-300 text-sm font-medium"
           >
             CONTACT US
@@ -99,7 +97,7 @@ export default function Header() {
           ))}
 
           <Link
-            href="contact/"
+            href="/contact"
             className="block mt-4 bg-[#e0c840] hover:bg-yellow-300 text-black text-center px-4 py-2 rounded text-sm font-medium"
           >
             CONTACT US

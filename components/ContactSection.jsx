@@ -1,8 +1,45 @@
+"use client";
+
+import { useState } from "react";
+
 export default function ContactSection() {
+  const [fullname, setFullname] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [error, setError] = useState([]);
+  const [success, setSuccess] = useState(false);
+
+  const handlesubmit = async (e) => {
+    e.preventDefault();
+
+
+    const res = await fetch("api/contact", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body:JSON.stringify({
+        fullname,
+        email,
+        message,
+      })
+    });
+       const {msg, success} = await res.json();
+setError(msg);
+setSuccess(success);
+
+if (success){
+  setFullname("");
+  setEmail("");
+  setMessage("");
+};
+
+  };
+    
+
   return (
     <section className="  p-10">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10">
-        {/* Left side - Google Map */}
         <div>
           <iframe
             className="w-full h-96 rounded shadow-md"
@@ -40,19 +77,28 @@ export default function ContactSection() {
             Duis ac finibus enim, sit amet vulputate quam. Ut ac ante vel dolor pulvinar bibendum.
           </p>
 
-          <form className="space-y-4">
+          <form className="space-y-4" onSubmit={handlesubmit}>
             <input
+            onChange={(e)=> setFullname(e.target.value)}
+            value={fullname}
               type="text"
+              id="fullname"
               placeholder="Your Name"
               className="w-full border border-gray-300 p-2 rounded"
             />
             <input
+            onChange={(e)=> setEmail(e.target.value)}
+            value={email}
               type="email"
+              id="email"
               placeholder="Your Email"
               className="w-full border border-gray-300 p-2 rounded"
             />
             <textarea
+            onChange={(e)=> setMessage(e.target.value)}
+            value={message}
               placeholder="Your Message"
+              id="message"
               rows="5"
               className="w-full border border-gray-300 p-2 rounded"
             ></textarea>
@@ -63,7 +109,23 @@ export default function ContactSection() {
               Submit
             </button>
           </form>
-        </div>
+          <div className="mt-4">
+  {/* Show success message */}
+  {success && typeof error === "string" && (
+    <div className="text-green-800 bg-green-100 px-5 py-2 rounded">{error}</div>
+  )}
+
+  {/* Show errors if it's an array */}
+  {!success && Array.isArray(error) && error.length > 0 && (
+    <div className="bg-red-100 px-5 py-3 rounded space-y-1">
+      {error.map((err, i) => (
+        <div key={i} className="text-red-600">{err}</div>
+      ))}
+    </div>
+  )}
+</div>
+
+          </div>
       </div>
     </section>
   );

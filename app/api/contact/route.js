@@ -1,7 +1,7 @@
-import { connectDB } from '../../../lib/mongodb';
+import { connectDB } from '@/lib/mongodb';
 import { NextResponse } from 'next/server';
 import mongoose from 'mongoose';
-import Contact from '../../../models/contact';
+import Contact from '@/app/models/contact';
 
 export async function POST(req) {
   try {
@@ -18,7 +18,7 @@ export async function POST(req) {
     await Contact.create({ fullname, email, message });
 
     return NextResponse.json({
-      msg: ["Message sent successfully."],
+      msg: ["Message sent Successfully"],
       success: true,
     });
   } catch (error) {

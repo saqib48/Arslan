@@ -13,7 +13,7 @@ export default function ContactSection() {
  const handlesubmit = async (e) => {
   e.preventDefault();
 
-  const res = await fetch("api/contact", {
+  const res = await fetch("/api/contact", {
     method: "POST",
     headers: {
       "Content-type": "application/json",

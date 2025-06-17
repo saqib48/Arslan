@@ -39,7 +39,7 @@ export default function ContactSection() {
     setTimeout(() => {
       setSuccess(false);
       setSuccessMsg("");
-    }, 3000);
+    }, 1000);
   } else {
     setError(msg);
     setSuccessMsg("");

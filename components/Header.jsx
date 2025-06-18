@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
 // Custom Smooth Scroll Function
-const customScrollTo = (id, duration = 1500) => {
+const customScrollTo = (id, duration = 1000) => {
   const target = document.getElementById(id);
   if (!target) return;
 
@@ -49,15 +49,22 @@ export default function Header() {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center space-x-6">
+        <nav className="hidden md:flex items-center space-x-6 ">
           {navItems.map((item, i) => (
-            <button
-              key={i}
-              onClick={() => customScrollTo(item.href.replace('/#', ''))}
-              className="hover:text-[#e0c840] font-medium"
-            >
-              {item.label}
-            </button>
+           <button
+  key={i}
+  onClick={() => {
+    if (window.location.pathname !== '/') {
+      window.location.href = item.href;
+    } else {
+      customScrollTo(item.href.replace('/#', ''));
+    }
+  }}
+  className="hover:text-[#e0c840] font-medium cursor-pointer"
+>
+  {item.label}
+</button>
+
           ))}
           <Link
             href="/contact"
@@ -77,16 +84,20 @@ export default function Header() {
       {menuOpen && (
         <div className="md:hidden bg-black px-4 pb-4 transition-all duration-500">
           {navItems.map((item, i) => (
-            <button
-              key={i}
-              onClick={() => {
-                customScrollTo(item.href.replace('/#', ''));
-                setMenuOpen(false); // auto-close
-              }}
-              className="block text-white py-2 border-b border-gray-700 w-full text-left"
-            >
-              {item.label}
-            </button>
+           <button
+  key={i}
+  onClick={() => {
+    if (window.location.pathname !== '/') {
+      window.location.href = item.href;
+    } else {
+      customScrollTo(item.href.replace('/#', ''));
+      setMenuOpen(false);
+    }
+  }}
+  className="block text-white py-2 border-b border-gray-700 w-full text-left"
+>
+  {item.label}
+</button>
           ))}
 
           <Link

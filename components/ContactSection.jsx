@@ -79,7 +79,7 @@ export default function ContactSection() {
           <h5 className="text-sm font-semibold text-[#e0c840] mb-2">CONTACT US</h5>
           <h3 className="text-2xl font-bold mb-4">HELLO, HAVE ANY QUESTION?</h3>
           <p className="text-[#b9b4b4] mb-6">
-            Duis ac finibus enim, sit amet vulputate quam. Ut ac ante vel dolor pulvinar bibendum.
+            Have a project in mind or just want to say hello? Fill out the form below — I’d love to hear from you and will get back shortly.
           </p>
 
           <form onSubmit={handleSubmit} className="space-y-4">

@@ -13,7 +13,9 @@ export default function Home() {
     <>
       <Header/>
       <main className="bg-[#101010] text-white">
-        <Banner />
+        <div id='home'>
+          <Banner />
+        </div>
         <div id='about'>
           <Aboutskill/>
           <Aboutcounter/>

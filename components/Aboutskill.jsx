@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export default function Aboutskill() {
   return (
-    <section className="py-20 px-6 md:px-20 w-full bg-[#101010]">
+    <section className="py-30 px-6 md:px-20 w-full bg-[#101010]">
      <div className="max-w-7xl flex flex-col md:flex-row gap-15 items-center justify-between mx-auto">
         <div>
           <h5 className="text-sm text-[#e0c840] font-medium">SINCE 2004</h5>

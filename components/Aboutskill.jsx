@@ -6,17 +6,7 @@ import Image from 'next/image';
 export default function Aboutskill() {
   return (
     <section className="py-20 px-6 md:px-20 w-full bg-[#101010]">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-        <div className="w-[100%] md:w-[80%]">
-          <Image
-            src="/images/F2-1.jpg"
-            alt="Alex Videen"
-            width={750}
-            height={900}
-            className="w-full h-auto object-cover rounded-2xl"
-          />
-        </div>
-
+     <div className="max-w-7xl flex flex-col md:flex-row gap-15 items-center justify-between mx-auto">
         <div>
           <h5 className="text-sm text-[#e0c840] font-medium">SINCE 2004</h5>
           <h3 className="text-3xl font-bold text-white mt-2">HELLO, I'M ARSLAN KHIZER</h3>
@@ -33,6 +23,15 @@ export default function Aboutskill() {
             <SkillBar label="3D MODELLING" percent={90} />
             <SkillBar label="POST-PRODUCTION TECHNIQUES" percent={100} />
           </div>
+        </div>
+         <div className="w-[100%] md:w-[55%]">
+          <Image
+            src="/images/F2-1.jpg"
+            alt="Alex Videen"
+            width={750}
+            height={900}
+            className="w-full h-auto object-cover rounded-2xl"
+          />
         </div>
       </div>
     </section>

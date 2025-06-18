@@ -4,10 +4,10 @@ import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
 const navItems = [
-  { label: 'Home', href: '/' },
-  { label: 'About', href: '/about' }, 
-  { label: 'Portfolio', href: '/portfolio' },
-  { label: 'Resume', href: '/resume' },
+  { label: 'Home', href: '/#' },
+  { label: 'About', href: '/#about' }, 
+  { label: 'Portfolio', href: '/#portfolio' },
+  // { label: 'Resume', href: '/resume' },
 ];
 
 export default function Header() {

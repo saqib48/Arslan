@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function IntroSection() {
   return (
-    <section className="bg-[#101010] py-16 px-4 md:px-10 lg:px-20 text-white">
+    <section className="bg-[#101010] py-20 px-4 md:px-10 lg:px-20 text-white">
       <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-12">
         <div className="space-y-6 animate-fadeInLeft">
           <h5 className="text-[#e0c840] text-sm tracking-widest">SINCE 2004</h5>

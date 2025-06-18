@@ -27,7 +27,7 @@ export default function Portfolio() {
   };
 
   return (
-    <section className="bg-[#101010] px-4 py-12 md:px-10 lg:px-20">
+    <section className="bg-[#101010] px-4 py-16 md:px-10 lg:px-20">
       <div className="text-center mb-12">
         <h5 className="text-sm text-[#e0c840] tracking-widest">PORTFOLIO</h5>
         <h3 className="text-3xl font-bold text-white">MY WORK</h3>

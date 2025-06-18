@@ -17,36 +17,36 @@ export default function Banner() {
         <div className="absolute inset-0 bg-black opacity-70" />
       </div>
 
-      <div className="relative z-10 max-w-[85%] mx-auto px-4 grid md:grid-cols-2 items-center gap-5">
-        <div className="space-y-2">
+      <div className="relative z-10 max-w-[85%] mx-auto px-4 grid md:grid-cols-2 items-center gap-6">
+        <div className="space-y-0">
           <div className="text-center md:text-left">
             <div className="text-6xl font-extrabold">
-              18<span className="text-[#e0c840] text-4xl align-top">+</span>
+              3<span className="text-[#e0c840] text-4xl align-top">+</span>
             </div>
-            <h3 className="text-lg mt-2">Years Experience</h3>
+            <h3 className="text-lg mt-1">Years Experience</h3>
           </div>
-          <div className="flex justify-center md:justify-start">
+          <div className="flex justify-center md:justify-start mt-[-80] mb-10">
             <Image
               src="/images/F1-1.png"
               alt="Experience"
               width={320}
-              height={300}
+              height={200}
               className="rounded-md"
             />
           </div>
 
-          <div className="grid grid-cols-2 gap-8">
+          <div className="grid grid-cols-2 ">
             <div className="text-center md:text-left">
               <div className="text-5xl font-extrabold">
                 15<span className="text-[#e0c840] text-3xl align-top">+</span>
               </div>
-              <h3 className="text-base mt-2">Best Award</h3>
+              <h3 className="text-base mt-1">Best Award</h3>
             </div>
             <div className="text-center md:text-left">
               <div className="text-5xl font-extrabold">
-                523<span className="text-[#e0c840] text-3xl align-top">+</span>
+                70<span className="text-[#e0c840] text-3xl align-top">+</span>
               </div>
-              <h3 className="text-base mt-2">Project Done</h3>
+              <h3 className="text-base mt-1">Project Done</h3>
             </div>
           </div>
         </div>
@@ -58,11 +58,10 @@ export default function Banner() {
             <span className="text-[#e0c840]">COOL</span>
           </h2>
           <p className="text-[#b9b4b4]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec
-            ullamcorper mattis, pulvinar dapibus leo.
+            At Arslan Edit's, we transform your raw footage into captivating visual stories. Whether it’s for social media, YouTube, or personal projects — our editing adds style, emotion, and polish that brings your vision to life.
           </p>
           <Link
-            href="#"
+            href="/contact"
             className="inline-flex items-center px-6 py-3 bg-[#e0c840] text-black font-semibold rounded hover:bg-yellow-300 transition"
           >
             <span>GET STARTED</span>

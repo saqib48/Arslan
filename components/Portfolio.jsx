@@ -9,12 +9,12 @@ export default function Portfolio() {
   const projects = [
     { title: 'Anonymous Traveller', video: 'https://www.youtube.com/embed/dQw4w9WgXcQ' },
     { title: 'Cloudy Evening Sky', video: 'https://www.youtube-nocookie.com/embed/LTXpNz_ymrs?si=7z20bAGwBZW_BWG-' },
-    { title: 'Anonymous Traveller', video: 'https://www.youtube-nocookie.com/embed/6IeVKpXu7cE?si=B6QV8_C8ASZuLJYP' },
-    { title: 'Cloudy Evening Sky', video: 'https://www.youtube.com/embed/mciqEzOXUU0?si=pLSuJ1nkD977GxHc' },
+    { title: 'Editing', video: 'https://www.youtube-nocookie.com/embed/6IeVKpXu7cE?si=B6QV8_C8ASZuLJYP' },
+    { title: 'Traveling Edits', video: 'https://www.youtube.com/embed/mciqEzOXUU0?si=pLSuJ1nkD977GxHc' },
+    { title: 'Traveller', video: 'https://www.youtube-nocookie.com/embed/gbZ6hCNlq7g?si=ID0OXKUZM8nqaH1u' },
+    { title: 'Arslan Edits', video: 'https://www.youtube.com/embed/qQdcYdFM17k?si=jNlzBwFYCopvhsHF' },
     { title: 'Anonymous Traveller', video: 'https://www.youtube-nocookie.com/embed/gbZ6hCNlq7g?si=ID0OXKUZM8nqaH1u' },
-    { title: 'Cloudy Evening Sky', video: 'https://www.youtube.com/embed/qQdcYdFM17k?si=jNlzBwFYCopvhsHF' },
-    { title: 'Anonymous Traveller', video: 'https://www.youtube-nocookie.com/embed/gbZ6hCNlq7g?si=ID0OXKUZM8nqaH1u' },
-    { title: 'Cloudy Evening Sky', video: 'https://www.youtube-nocookie.com/embed/LTXpNz_ymrs?si=7z20bAGwBZW_BWG-' },
+    { title: 'Sky', video: 'https://www.youtube-nocookie.com/embed/LTXpNz_ymrs?si=7z20bAGwBZW_BWG-' },
     { title: 'Anonymous Traveller', video: 'https://www.youtube-nocookie.com/embed/gbZ6hCNlq7g?si=ID0OXKUZM8nqaH1u' },
   ];
 
@@ -32,15 +32,16 @@ export default function Portfolio() {
         <h5 className="text-sm text-[#e0c840] tracking-widest">PORTFOLIO</h5>
         <h3 className="text-3xl font-bold text-white">MY WORK</h3>
         <p className="text-[#b9b4b4] mt-3 max-w-xl mx-auto text-base">
-          Duis ac finibus enim, sit amet vulputate quam. Ut ac ante vel dolor pulvinar bibendum.
+          Explore my finest video editing projects that blend creativity, storytelling, and visual impact.
         </p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {visibleProjects.map((project, idx) => (
           <div
+          onClick={() => setSelectedVideo(project.video)}
             key={idx}
-            className="group relative h-64 bg-cover bg-center rounded-xl shadow-xl overflow-hidden"
+            className="group relative cursor-pointer h-64 bg-cover bg-center rounded-xl shadow-xl overflow-hidden"
             style={{ backgroundImage: `url(${getYouTubeThumbnail(project.video)})` }}
           >
             <div className="absolute inset-0 bg-black/50 group-hover:bg-black/70 transition-all duration-300 ease-in-out"></div>

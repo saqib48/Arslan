@@ -36,19 +36,15 @@ export default function Footer() {
     </nav>
 
         <p className="text-[#b9b4b4] max-w-xl mx-auto mb-6">
-          Duis ac finibus enim, sit amet vulputate quam. Ut ac ante vel dolor pulvinar bibendum.
-          Curabitur molestie, nisl quis porta laoreet, est ex pellentesque orci.
+          At Arslan Edits, we believe every story deserves to be told with passion and precision. From dynamic edits to cinematic visuals, we’re dedicated to delivering high-quality video content that leaves a lasting impact.
         </p>
 
         <div className="flex justify-center gap-4 mb-6">
-          <Link href="#" className="text-white hover:text-blue-600 text-xl">
+          <Link href="https://www.facebook.com/arsl0341" className="text-white hover:text-blue-600 text-xl">
             <FaFacebookF />
           </Link>
-          <Link href="#" className="text-white hover:text-pink-500 text-xl">
+          <Link href="https://www.instagram.com/arslaneditz5/" className="text-white hover:text-pink-500 text-xl">
             <FaInstagram />
-          </Link>
-          <Link href="#" className="text-white hover:text-blue-400 text-xl">
-            <FaTwitter />
           </Link>
           <Link href="#" className="text-white hover:text-red-600 text-xl">
             <FaYoutube />

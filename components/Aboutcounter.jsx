@@ -34,10 +34,10 @@ export default function Aboutcounter() {
   return (
     <section className="pb-16 text-[#e0c840]">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-25 pl-6">
-        <CounterItem iconClass="icon icon-timing" end={18} title="Years Experience" />
-        <CounterItem iconClass="icon icon-smart" end={523} title="Project Done" />
+        <CounterItem iconClass="icon icon-timing" end={3} title="Years Experience" />
+        <CounterItem iconClass="icon icon-smart" end={70} title="Project Done" />
         <CounterItem iconClass="icon icon-star" end={15} title="Best Award" />
-        <CounterItem iconClass="icon icon-video-camera" end={952} title="Videos Done" />
+        <CounterItem iconClass="icon icon-video-camera" end={586} title="Videos Done" />
       </div>
     </section>
   );

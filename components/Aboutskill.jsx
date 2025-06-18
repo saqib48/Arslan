@@ -11,8 +11,7 @@ export default function Aboutskill() {
           <h5 className="text-sm text-[#e0c840] font-medium">SINCE 2004</h5>
           <h3 className="text-3xl font-bold text-white mt-2">HELLO, I'M ARSLAN KHIZER</h3>
           <p className="mt-4 text-[#b9b4b4]">
-            Duis ac finibus enim, sit amet vulputate quam. Ut ac ante vel dolor pulvinar bibendum.
-            Curabitur molestie, nisl quis porta laoreet.
+            I’m a creative video editor with 3+ years of experience turning ideas into stunning visuals — from cinematic cuts to motion graphics that stand out.
           </p>
 
           <h4 className="text-xl font-semibold text-white mt-8 mb-4">MY SKILLS</h4>
@@ -28,8 +27,8 @@ export default function Aboutskill() {
           <Image
             src="/images/F2-1.jpg"
             alt="Alex Videen"
-            width={750}
-            height={900}
+            width={1200}
+            height={1000}
             className="w-full h-auto object-cover rounded-2xl"
           />
         </div>

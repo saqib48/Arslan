@@ -31,7 +31,7 @@ export default function VideoPromotion() {
         <div className=" h-6" />
 
         <Link
-          href="#"
+          href="/contact"
           className="inline-flex items-center gap-2 bg-[#e0c840] text-black py-2 px-6 rounded hover:bg-yellow-300 transition-transform transform hover:scale-105"
         >
           <span>GET STARTED</span>

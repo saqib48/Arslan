@@ -6,55 +6,47 @@ export default function ContactSection() {
   const [fullname, setFullname] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [error, setError] = useState([]);
   const [successMsg, setSuccessMsg] = useState("");
-  const [success, setSuccess] = useState(false);
+  const [errorMsg, setErrorMsg] = useState("");
 
-const handlesubmit = async (e) => {
-  e.preventDefault();
-
-  try {
-    const res = await fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        "Content-type": "application/json",
-      },
-      body: JSON.stringify({ fullname, email, message }),
-    });
-
-    const { msg, success } = await res.json();
-
-    setSuccess(success);
-
-    if (success) {
-      setFullname("");
-      setEmail("");
-      setMessage("");
-      setError([]);
-      setSuccessMsg(msg);
-
-      setTimeout(() => {
-        setSuccess(false);
-        setSuccessMsg("");
-      }, 200);
-    } else {
-      setError(msg);
-      setSuccessMsg("");
-    }
-  } catch (error) {
-    console.error("Client Error:", error);
-    setError(["Something went wrong. Please try again later."]);
-    setSuccess(false);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     setSuccessMsg("");
-  }
-};
+    setErrorMsg("");
 
+    try {
+      const res = await fetch("https://formspree.io/f/mblykpke", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          fullname,
+          email,
+          message,
+        }),
+      });
 
+      const data = await res.json();
 
+      if (res.ok) {
+        setSuccessMsg("Message sent successfully!");
+        setFullname("");
+        setEmail("");
+        setMessage("");
+      } else {
+        setErrorMsg("Failed to send message.");
+      }
+    } catch (error) {
+      setErrorMsg("Something went wrong.");
+    }
+  };
 
   return (
-    <section className="  p-10">
+    <section className="p-10">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10">
+        {/* Left Side: Map and Info */}
         <div>
           <iframe
             className="w-full h-96 rounded shadow-md"
@@ -82,6 +74,7 @@ const handlesubmit = async (e) => {
           </div>
         </div>
 
+        {/* Right Side: Contact Form */}
         <div className="bg-white/10 backdrop-blur-md p-10 rounded-2xl shadow-xl h-fit self-start border border-[#e0c840] max-w-xl w-full">
           <h5 className="text-sm font-semibold text-[#e0c840] mb-2">CONTACT US</h5>
           <h3 className="text-2xl font-bold mb-4">HELLO, HAVE ANY QUESTION?</h3>
@@ -89,29 +82,32 @@ const handlesubmit = async (e) => {
             Duis ac finibus enim, sit amet vulputate quam. Ut ac ante vel dolor pulvinar bibendum.
           </p>
 
-          <form className="space-y-4" onSubmit={handlesubmit}>
+          <form onSubmit={handleSubmit} className="space-y-4">
             <input
-              onChange={(e) => setFullname(e.target.value)}
-              value={fullname}
               type="text"
-              id="fullname"
+              name="fullname"
+              value={fullname}
+              onChange={(e) => setFullname(e.target.value)}
               placeholder="Your Name"
+              required
               className="w-full border border-gray-300 p-2 rounded"
             />
             <input
-              onChange={(e) => setEmail(e.target.value)}
-              value={email}
               type="email"
-              id="email"
+              name="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               placeholder="Your Email"
+              required
               className="w-full border border-gray-300 p-2 rounded"
             />
             <textarea
-              onChange={(e) => setMessage(e.target.value)}
-              value={message}
-              placeholder="Your Message"
-              id="message"
+              name="message"
               rows="5"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              placeholder="Your Message"
+              required
               className="w-full border border-gray-300 p-2 rounded"
             ></textarea>
             <button
@@ -121,21 +117,16 @@ const handlesubmit = async (e) => {
               Submit
             </button>
           </form>
+
+          {/* Success & Error Messages */}
           <div className="mt-4">
-            {success && successMsg && (
+            {successMsg && (
               <div className="text-green-800 bg-green-100 px-5 py-2 rounded">{successMsg}</div>
             )}
-
-            {!success && Array.isArray(error) && error.length > 0 && (
-              <div className="bg-red-100 px-5 py-3 rounded space-y-1">
-                {error.map((err, i) => (
-                  <div key={i} className="text-red-600">{err}</div>
-                ))}
-              </div>
+            {errorMsg && (
+              <div className="text-red-800 bg-red-100 px-5 py-2 rounded">{errorMsg}</div>
             )}
           </div>
-
-
         </div>
       </div>
     </section>
